@@ -1,0 +1,29 @@
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.contact__title {
+  display: flex;
+  flex-direction: column;
+  line-height: 95px;
+  width: 450px;
+}
+
+.contact__contact {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-size: 7rem;
+}
+
+.contact__me {
+  color: #fff;
+  -webkit-text-stroke: 6px #fff;
+  font-size: 7rem;
+  align-self: flex-end;
+}
+
+.contact__description {
+  margin-top: 50px;
+}

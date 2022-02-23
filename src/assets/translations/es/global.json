@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "about-me": "Sobre mi",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "presentation": {
+    "projects": "Proyectos"
+  },
+  "about-me": {
+    "about": "Sobre",
+    "me": "MI"
+  },
+  "skills": {
+    "skill": "Skill",
+    "set": "SET"
+  },
+  "projects": {
+    "projects": "Proyectos",
+    "starwars-app": "Es un simple blog del universo de Star Wars usando la API de 'swapi' que sigue en proceso."
+  },
+  "contact": {
+    "contact": "Ponte en",
+    "me": "contacto"
+  }
+}

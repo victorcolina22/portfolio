@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "about-me": "About me",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "presentation": {
+    "projects": "Projects"
+  },
+  "about-me": {
+    "about": "About",
+    "me": "ME"
+  },
+  "skills": {
+    "skill": "Skill",
+    "set": "Set"
+  },
+  "projects": {
+    "projects": "Projects",
+    "starwars-app": "It is a simple Star Wars universe blog using the 'swapi' API that is still in process."
+  },
+  "contact": {
+    "contact": "Contact",
+    "me": "ME"
+  }
+}

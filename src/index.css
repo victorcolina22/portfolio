@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: RobotoBlack;
+  src: url(./assets/fonts/Roboto-Black.ttf) format("opentype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: RobotoLight;
+  src: url(./assets/fonts/Roboto-Light.ttf) format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(./assets/galaxy.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: Roboto, "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* h1 {
+  font-family: RobotoBlack;
+} */
+
+p {
+  font-family: RobotoLight;
+}
+
+.presentation {
+  color: #fff;
+  width: 90%;
+  height: 60vh;
+  margin: 180px 0 240px 150px;
+}
+
+.presentation__name {
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.presentation__front {
+  -webkit-text-stroke: 4px #fff;
+  color: transparent;
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-family: RobotoBlack;
+}
+
+.presentation__end {
+  color: #fff;
+  font-size: 7rem;
+  margin-left: 120px;
+  text-transform: uppercase;
+  font-family: RobotoBlack;
+}
+
+.presentation__button {
+  max-width: 500px;
+}
+
+.presentation hr {
+  width: 100%;
+  margin: 0;
+}
+
+.presentation__button button {
+  display: block;
+  background: transparent;
+  width: 180px;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 5px;
+  cursor: pointer;
+  margin: 30px auto;
+  transition: 250ms ease-in-out;
+}
+
+.presentation__button button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 250ms ease-in-out;
+}
+
+.aboutme-container {
+  background-color: #17181c;
+}
+
+.projects-container {
+  background-color: #17181c;
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    margin: 100px auto 0;
+  }
 }

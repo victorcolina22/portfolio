@@ -1,0 +1,84 @@
+.skillSet {
+  width: 90%;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.userWindow {
+  background-color: #10110e;
+  width: 400px;
+  height: 550px;
+  border: 2px solid #fff;
+}
+
+.userWindow__header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.minimize,
+.squares {
+  width: 40px;
+}
+
+.close {
+  width: 30px;
+}
+
+.userWindow__avatar {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #fff;
+  margin: 30px auto;
+}
+
+.head {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin: 30px auto 0;
+}
+
+.body {
+  width: 100px;
+  height: 70px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.userWindow__text {
+  width: 300px;
+  color: #fff;
+  text-align: center;
+  margin: 50px auto 0;
+}
+
+.skillSet__title {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  line-height: 95px;
+}
+
+.skillSet__skill {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-size: 7rem;
+}
+
+.skillSet__set {
+  color: #fff;
+  -webkit-text-stroke: 6px #fff;
+  font-size: 7rem;
+  align-self: flex-end;
+}
