@@ -89,18 +89,18 @@
   }
 
   .skillSet__title {
-    width: 250px;
+    width: 220px;
     line-height: 75px;
     margin: 0 auto;
   }
 
   .skillSet__set {
-    font-size: 4.5rem;
+    font-size: 4rem;
     -webkit-text-stroke: 2px #fff;
   }
 
   .skillSet__skill {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .userWindow {
