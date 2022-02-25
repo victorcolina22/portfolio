@@ -54,9 +54,9 @@ export const App = () => {
                 <Projects />
             </section>
 
-            {/* <section className="contact-container">
+            <section className="contact-container">
                 <Contact />
-            </section> */}
+            </section>
         </div>
     )
 }

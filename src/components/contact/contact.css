@@ -27,3 +27,23 @@
 .contact__description {
   margin-top: 50px;
 }
+
+@media (max-width: 767px) {
+  .contact__title {
+    width: 250px;
+    line-height: 65px;
+    margin: 0 auto;
+  }
+
+  .contact__contact {
+    font-size: 4rem;
+  }
+
+  .contact__me {
+    font-size: 4rem;
+  }
+
+  .contact__description img {
+    width: 50%;
+  }
+}
