@@ -5,42 +5,58 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Skills } from "./components/skills/Skills";
 import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
+import { useEffect, useState } from "react";
 
 
 export const App = () => {
+
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => setOffsetY(window.pageYOffset);
+    // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, [])
 
     const [t] = useTranslation("global");
 
     return (
         <div className="animate__animated animate__fadeIn animate__slower">
-            <Navbar />
 
-            <div className='presentation'>
-                <h2 className='presentation__name'>victor colina leon</h2>
-                <p className='presentation__front'>frontend</p>
-                <p className='presentation__end'>developer</p>
+            <header className='header'>
+                <Navbar />
 
-                <div className='presentation__button'>
-                    <hr />
-                    <button>{t("presentation.projects")}</button>
+                <div className="presentation">
+                    <h2 className='presentation__name'>victor colina leon</h2>
+                    <p className='presentation__front'>frontend</p>
+                    <p className='presentation__end'>developer</p>
+
+                    <div className='presentation__button'>
+                        <hr />
+                        <button>{t("presentation.projects")}</button>
+                    </div>
                 </div>
-            </div>
+            </header>
 
-            {/* <div className="aboutme-container">
+            <section className="aboutme-container">
                 <AboutMe />
-            </div> */}
+            </section>
 
-            {/* <div className="skillset-container">
+            <section className="skillset-container">
                 <Skills />
-            </div> */}
+            </section>
 
-            {/* <div className="projects-container">
+            <section className="projects-container">
                 <Projects />
-            </div> */}
+            </section>
 
-            {/* <div className="contact-container">
+            {/* <section className="contact-container">
                 <Contact />
-            </div> */}
+            </section> */}
         </div>
     )
 }

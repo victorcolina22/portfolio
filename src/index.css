@@ -1,3 +1,7 @@
+:root {
+  --primary: #fff;
+}
+
 @font-face {
   font-family: RobotoBlack;
   src: url(./assets/fonts/Roboto-Black.ttf) format("opentype");
@@ -37,11 +41,16 @@ p {
   font-family: RobotoLight;
 }
 
-.presentation {
-  color: #fff;
+.header {
+  color: var(--primary);
   width: 90%;
-  height: 60vh;
-  margin: 180px 0 240px 150px;
+  height: 100vh;
+  margin: 50px auto 0;
+}
+
+.presentation {
+  width: 80%;
+  margin: 170px auto 0;
 }
 
 .presentation__name {
@@ -51,7 +60,7 @@ p {
 }
 
 .presentation__front {
-  -webkit-text-stroke: 4px #fff;
+  -webkit-text-stroke: 4px var(--primary);
   color: transparent;
   font-size: 7rem;
   text-transform: uppercase;
@@ -59,7 +68,7 @@ p {
 }
 
 .presentation__end {
-  color: #fff;
+  color: var(--primary);
   font-size: 7rem;
   margin-left: 120px;
   text-transform: uppercase;
@@ -70,19 +79,19 @@ p {
   max-width: 500px;
 }
 
-.presentation hr {
+/* .presentation hr {
   width: 100%;
   margin: 0;
-}
+} */
 
 .presentation__button button {
   display: block;
   background: transparent;
   width: 180px;
-  border: 3px solid #fff;
+  border: 3px solid var(--primary);
   border-radius: 50px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.3rem;
   padding: 5px;
   cursor: pointer;
@@ -91,7 +100,7 @@ p {
 }
 
 .presentation__button button:hover {
-  background-color: #fff;
+  background-color: var(--primary);
   color: #000;
   transition: 250ms ease-in-out;
 }
@@ -104,8 +113,35 @@ p {
   background-color: #17181c;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .presentation {
+    /* margin: 50px auto; */
+    text-align: center;
+  }
+
+  .presentation__front {
+    -webkit-text-stroke: 1px var(--primary);
+    font-size: 3rem;
+    margin-left: -40px;
+  }
+
+  .presentation__end {
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .presentation {
     margin: 100px auto 0;
+  }
+
+  .presentation__front {
+    -webkit-text-stroke: 2px var(--primary);
+    font-size: 5rem;
+  }
+
+  .presentation__end {
+    font-size: 5rem;
   }
 }

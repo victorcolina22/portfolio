@@ -82,3 +82,55 @@
   font-size: 7rem;
   align-self: flex-end;
 }
+
+@media (max-width: 767px) {
+  .skillSet {
+    flex-direction: column-reverse;
+  }
+
+  .skillSet__title {
+    width: 250px;
+    line-height: 75px;
+    margin: 0 auto;
+  }
+
+  .skillSet__set {
+    font-size: 5rem;
+    -webkit-text-stroke: 2px #fff;
+  }
+
+  .skillSet__skill {
+    font-size: 5rem;
+  }
+
+  .userWindow {
+    width: 280px;
+    height: 480px;
+    margin: 0 auto;
+  }
+
+  .userWindow__avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .userWindow__text {
+    width: 250px;
+    margin: 20px auto 0;
+  }
+
+  .minimize,
+  .squares {
+    width: 20px;
+  }
+
+  .close {
+    width: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .userWindow__text {
+    width: 280px;
+  }
+}
