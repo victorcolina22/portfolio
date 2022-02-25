@@ -87,19 +87,19 @@
   }
 
   .aboutme__title {
-    width: 270px;
+    width: 220px;
     margin: 0 auto;
     line-height: 75px;
     margin-bottom: 30px;
   }
 
   .aboutme__about {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-left: 0;
   }
 
   .aboutme__me {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-right: 0;
     -webkit-text-stroke: 2px #fff;
   }
