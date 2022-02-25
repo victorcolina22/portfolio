@@ -107,10 +107,12 @@ p {
 
 .aboutme-container {
   background-color: #17181c;
+  height: 100vh;
 }
 
 .projects-container {
   background-color: #17181c;
+  height: 100vh;
 }
 
 @media (max-width: 767px) {
