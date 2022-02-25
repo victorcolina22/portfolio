@@ -32,8 +32,10 @@ export const App = () => {
 
                 <div className="presentation">
                     <h2 className='presentation__name'>victor colina leon</h2>
-                    <p className='presentation__front'>frontend</p>
-                    <p className='presentation__end'>developer</p>
+                    <div className="presentation__big-title">
+                        <p className='presentation__front'>frontend</p>
+                        <p className='presentation__end'>developer</p>
+                    </div>
 
                     <div className='presentation__button'>
                         <hr />

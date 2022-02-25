@@ -59,6 +59,10 @@ p {
   font-size: 1.5rem;
 }
 
+.presentation__big-title {
+  line-height: 105px;
+}
+
 .presentation__front {
   -webkit-text-stroke: 4px var(--primary);
   color: transparent;
@@ -119,6 +123,10 @@ p {
   .presentation {
     /* margin: 50px auto; */
     text-align: center;
+  }
+
+  .presentation__big-title {
+    line-height: normal;
   }
 
   .presentation__front {
