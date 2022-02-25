@@ -9,7 +9,8 @@
   },
   "about-me": {
     "about": "Sobre",
-    "me": "MI"
+    "me": "MI",
+    "description": "Saludos, soy un Desarrollador Front-End, alguien proactivo que siempre busca nuevos desafíos y alguien muy entusiasta por aprender constantemente. Me encanta el lenguaje de JavaScript y es lo que he usado desde que comencé en este mundo de la programación, pero estoy abierto a aprender cualquier stack siempre que exista la oportunidad."
   },
   "skills": {
     "skill": "Skill",

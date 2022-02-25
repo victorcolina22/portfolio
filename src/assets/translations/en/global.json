@@ -9,7 +9,8 @@
   },
   "about-me": {
     "about": "About",
-    "me": "ME"
+    "me": "ME",
+    "description": "Greetings, I am a Front-End Developer, someone proactive who is always looking for new challenges and someone very enthusiastic about constantly learning. I love the JavaScript language and it's what I've used since I started in this programming world, but I'm open to learning any stack whenever the opportunity exists."
   },
   "skills": {
     "skill": "Skill",

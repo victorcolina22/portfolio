@@ -33,10 +33,7 @@ export const AboutMe = () => {
                     {/* </Animator> */}
                     {/* <Animator animation={FadeUp}> */}
                     <p className='aboutme__text'>
-                        Greetings, I’m a software developer, Frontend Engineer, designer enthusiast and a natural problem
-                        solver always looking for new challenges, I am well versed when it comes to JavaScript programming,
-                        using it smoothly in almost every aspect of my projects/apps,
-                        but I’m always open to learn any stacks if it get things done.
+                        {t("about-me.description")}
                     </p>
                     {/* </Animator> */}
                 </div>
