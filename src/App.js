@@ -7,7 +7,6 @@ import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
 import { useEffect, useState } from "react";
 
-
 export const App = () => {
 
     const [offsetY, setOffsetY] = useState(0);
