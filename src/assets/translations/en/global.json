@@ -23,5 +23,11 @@
   "contact": {
     "contact": "Contact",
     "me": "ME"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
   }
 }

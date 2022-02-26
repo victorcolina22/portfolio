@@ -23,5 +23,11 @@
   "contact": {
     "contact": "Ponte en",
     "me": "contacto"
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar"
   }
 }
