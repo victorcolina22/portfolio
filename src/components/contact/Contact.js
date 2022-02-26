@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, Move, MoveIn } from "react-scroll-motion";
@@ -9,6 +10,32 @@ import './contact.css';
 const FadeUp = batch(Fade(), Move());
 
 export const Contact = () => {
+
+    const [inputValue, setInputValue] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const { name, email, message } = inputValue;
+
+    const handleInputChange = ({ target }) => {
+        setInputValue({
+            ...inputValue,
+            [target.name]: target.value
+        });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setInputValue({
+            name: '',
+            email: '',
+            message: ''
+        });
+
+        console.log(inputValue)
+    }
 
     const [t] = useTranslation("global");
 
@@ -27,15 +54,28 @@ export const Contact = () => {
                     </h2>
                 </div>
                 {/* </Animator> */}
-                <form id="form">
+                <form
+                    id="form"
+                    onSubmit={handleSubmit}>
                     <label htmlFor="name">Name</label>
-                    <input type="text" name="name" />
+                    <input
+                        type="text"
+                        name="name"
+                        onChange={handleInputChange}
+                        value={name} />
 
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" />
+                    <input
+                        type="email"
+                        name="email"
+                        onChange={handleInputChange}
+                        value={email} />
 
                     <label htmlFor="message">Message</label>
-                    <textarea name="message" />
+                    <textarea
+                        name="message"
+                        onChange={handleInputChange}
+                        value={message} />
 
                     <button>Enviar</button>
                 </form>
