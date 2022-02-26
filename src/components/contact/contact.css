@@ -86,7 +86,7 @@
 
 @media (max-width: 767px) {
   .contact__title {
-    width: 250px;
+    width: 280px;
     line-height: 65px;
     margin: 0 auto;
   }
@@ -101,5 +101,15 @@
 
   .contact__description img {
     width: 50%;
+  }
+
+  #form {
+    width: 250px;
+  }
+
+  .rocket-img {
+    display: block;
+    margin: 30px auto 0;
+    width: 250px;
   }
 }
