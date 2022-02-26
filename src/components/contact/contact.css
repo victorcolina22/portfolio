@@ -113,3 +113,14 @@
     width: 250px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact__title {
+    margin: 0 auto;
+  }
+
+  .rocket-img {
+    display: block;
+    margin: 30px auto 0;
+  }
+}
