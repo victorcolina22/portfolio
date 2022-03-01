@@ -17,7 +17,6 @@
     "react-i18next": "^11.15.4",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "react-scroll-motion": "^0.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

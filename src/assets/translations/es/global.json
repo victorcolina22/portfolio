@@ -28,7 +28,11 @@
     "name": "Nombre",
     "email": "Correo",
     "message": "Mensaje",
-    "send": "Enviar"
+    "send": "Enviar",
+    "placeholder": {
+      "name": "Tu nombre",
+      "email": "Correo"
+    }
   },
   "notifications": {
     "success": "Información enviada correctamente",

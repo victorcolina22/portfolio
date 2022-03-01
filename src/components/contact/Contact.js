@@ -64,14 +64,14 @@ export const Contact = () => {
                     <input
                         type="text"
                         name="name"
-                        placeholder="Your name"
+                        placeholder={t('form.placeholder.name')}
                         required />
 
                     <label htmlFor="email">{t("form.email")}</label>
                     <input
                         type="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder={t('form.placeholder.email')}
                         required />
 
                     <label htmlFor="message">{t("form.message")}</label>

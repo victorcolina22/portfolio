@@ -1,16 +1,11 @@
 import { useTranslation } from "react-i18next";
 
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, Move, MoveIn } from "react-scroll-motion";
-
 import squares from '../../assets/icons/squares.svg';
 import minimize from '../../assets/icons/minimize.svg';
 import closeIcon from '../../assets/icons/close.svg';
 import starwarsApp from '../../assets/projects/starwars-preview.PNG'
 
 import './projects.css'
-import { useEffect, useState } from "react";
-
-const FadeUp = batch(Fade(), Move());
 
 
 export const Projects = () => {
@@ -19,9 +14,6 @@ export const Projects = () => {
 
     return (
         <>
-            {/* <ScrollContainer>
-                <ScrollPage page={3}> */}
-            {/* <Animator animation={FadeUp}> */}
             <div className="projects" id="myProjects">
                 <h2 className="projects__title">
                     {t("projects.projects")}
@@ -48,9 +40,6 @@ export const Projects = () => {
                     </div>
                 </div>
             </div>
-            {/* </Animator> */}
-            {/* </ScrollPage>
-            </ScrollContainer> */}
         </>
     )
 }
