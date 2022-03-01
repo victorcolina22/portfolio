@@ -1,15 +1,25 @@
 import { useTranslation } from "react-i18next";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 import { AboutMe } from "./components/aboutme/AboutMe";
 import { Navbar } from "./components/navbar/Navbar";
 import { Skills } from "./components/skills/Skills";
 import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
+import { useEffect } from "react";
 
 
 export const App = () => {
 
     const [t] = useTranslation("global");
+
+    useEffect(() => {
+        Aos.init({
+            duration: 500,
+            once: true
+        });
+    }, [])
 
     return (
         <div className="animate__animated animate__fadeIn animate__slower">
@@ -31,19 +41,19 @@ export const App = () => {
                 </div>
             </header>
 
-            <section className="aboutme-container">
+            <section data-aos='fade-up' className="aboutme-container">
                 <AboutMe />
             </section>
 
-            <section className="skillset-container">
+            <section data-aos='fade-up' className="skillset-container">
                 <Skills />
             </section>
 
-            <section className="projects-container">
+            <section data-aos='fade-up' className="projects-container">
                 <Projects />
             </section>
 
-            <section className="contact-container">
+            <section data-aos='fade-up' className="contact-container">
                 <Contact />
             </section>
         </div>

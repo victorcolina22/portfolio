@@ -34,40 +34,38 @@ export const Contact = () => {
     }
 
     return (
-        <>
-            <div className="contact" id="contact-me">
-                <div className="contact__title">
-                    <h2 className="contact__contact">
-                        {t("contact.contact")}
-                    </h2>
-                    <h2 className="contact__me">
-                        {t("contact.me")}
-                    </h2>
-                </div>
-                <form
-                    id="form"
-                    onSubmit={handleSubmit}>
-                    <label htmlFor="name">{t("form.name")}</label>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder={t('form.placeholder.name')}
-                        required />
-
-                    <label htmlFor="email">{t("form.email")}</label>
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder={t('form.placeholder.email')}
-                        required />
-
-                    <label htmlFor="message">{t("form.message")}</label>
-                    <textarea name="message" />
-
-                    <button>{t("form.send")}</button>
-                </form>
-                <img className="rocket-img" src={rocket} alt='rocket' />
+        <div className="contact" id="contact-me">
+            <div className="contact__title">
+                <h2 className="contact__contact">
+                    {t("contact.contact")}
+                </h2>
+                <h2 className="contact__me">
+                    {t("contact.me")}
+                </h2>
             </div>
-        </>
+            <form
+                id="form"
+                onSubmit={handleSubmit}>
+                <label htmlFor="name">{t("form.name")}</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder={t('form.placeholder.name')}
+                    required />
+
+                <label htmlFor="email">{t("form.email")}</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder={t('form.placeholder.email')}
+                    required />
+
+                <label htmlFor="message">{t("form.message")}</label>
+                <textarea name="message" />
+
+                <button>{t("form.send")}</button>
+            </form>
+            <img className="rocket-img" src={rocket} alt='rocket' />
+        </div>
     )
 }
