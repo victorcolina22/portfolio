@@ -30,19 +30,6 @@ export const Contact = () => {
                 console.log(error.text);
             });
 
-        // const result = 200;
-        // setTimeout(() => {
-        //     if (result === 200) {
-        //         enqueueSnackbar(t("notifications.success"), {
-        //             variant: 'success'
-        //         });
-
-        //         enqueueSnackbar(t("notifications.error"), {
-        //             variant: 'error'
-        //         });
-        //     }
-        // }, 2000);
-
         e.target.reset();
     }
 
