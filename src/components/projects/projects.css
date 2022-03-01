@@ -77,9 +77,6 @@
   transition: 250ms ease-in-out;
 }
 
-.starwars-project img:hover {
-}
-
 @media (max-width: 767px) {
   .projects__title {
     font-size: 3.8rem;
