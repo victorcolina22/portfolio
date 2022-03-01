@@ -2,7 +2,8 @@
   "navbar": {
     "about-me": "Sobre mi",
     "skills": "Habilidades",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "resume": "Currículum"
   },
   "presentation": {
     "projects": "Proyectos"

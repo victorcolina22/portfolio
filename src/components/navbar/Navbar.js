@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 import './navbar.css';
 
+import cv from '../../assets/Curriculum_Victor_Colina.pdf';
+
 
 export const Navbar = () => {
 
@@ -59,6 +61,11 @@ export const Navbar = () => {
                         <li>
                             <a href='#contact-me'>
                                 <p>{t("navbar.contact")}</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={cv} download>
+                                <p>{t("navbar.resume")}</p>
                             </a>
                         </li>
                         <li>
@@ -122,6 +129,15 @@ export const Navbar = () => {
                                     onClick={hideBurgerMenu}
                                 >
                                     <p>{t("navbar.contact")}</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={cv}
+                                    download
+                                    onClick={hideBurgerMenu}
+                                >
+                                    <p>{t("navbar.resume")}</p>
                                 </a>
                             </li>
                             <li>

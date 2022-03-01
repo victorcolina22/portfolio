@@ -21,7 +21,7 @@
 
 .navbar__items__list {
   max-width: 600px;
-  width: 400px;
+  width: 470px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +114,22 @@ hr {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 767px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .navbar__hamburger,
+  .navbar-responsive {
+    display: none;
+  }
+
+  .navbar__items {
+    display: block;
+  }
+} */
+
+@media (min-width: 1024px) {
   .navbar {
     padding: 0 30px;
   }

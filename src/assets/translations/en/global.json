@@ -2,7 +2,8 @@
   "navbar": {
     "about-me": "About me",
     "skills": "Skills",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "presentation": {
     "projects": "Projects"
