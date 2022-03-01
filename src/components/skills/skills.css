@@ -135,6 +135,11 @@
     font-size: 4rem;
   }
 
+  .skillSet__habilities {
+    width: 280px;
+    margin: 0 auto;
+  }
+
   .userWindow {
     width: 280px;
     height: 480px;

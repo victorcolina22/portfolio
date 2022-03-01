@@ -85,7 +85,6 @@ export const Navbar = () => {
                         onChange={handleBurgerMenu}
                         checked={burgerMenu} />
 
-                    {/* <div className={(dropdown) ? 'navbar-responsive__items' : 'hide'}> */}
                     <div className='navbar-responsive__items'>
                         <ul>
                             <li>
