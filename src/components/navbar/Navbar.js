@@ -11,7 +11,7 @@ export const Navbar = () => {
 
     const [t, translate] = useTranslation("global");
     const { language } = useContext(TranslationContext);
-    const [dropdown, setDropdown] = useState(false);
+    const [burgerMenu, setMenuBurger] = useState(false);
 
     const handleLanguage = () => {
         if (language === 'en') {
@@ -22,6 +22,14 @@ export const Navbar = () => {
     }
 
     localStorage.setItem('lng', language);
+
+    const handleBurgerMenu = (e) => {
+        setMenuBurger(e.target.checked);
+    }
+
+    const hideBurgerMenu = () => {
+        setMenuBurger(!burgerMenu);
+    }
 
     return (
         <>
@@ -63,33 +71,53 @@ export const Navbar = () => {
                 </div>
 
                 <div className='navbar-responsive'>
-                    <button
-                        className='navbar__hamburger'
-                        onClick={() => setDropdown(value => !value)}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <label htmlFor='menu'>
+                        <div className='navbar__hamburger navbar__label'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </label>
+                    <input
+                        type="checkbox"
+                        id='menu'
+                        className='navbar__input'
+                        onChange={handleBurgerMenu}
+                        checked={burgerMenu} />
 
-                    <div className={(dropdown) ? 'navbar-responsive__items' : 'hide'}>
+                    {/* <div className={(dropdown) ? 'navbar-responsive__items' : 'hide'}> */}
+                    <div className='navbar-responsive__items'>
                         <ul>
                             <li>
-                                <a href='#about-me'>
+                                <a
+                                    href='#about-me'
+                                    onClick={hideBurgerMenu}
+                                >
                                     <p>{t("navbar.about-me")}</p>
                                 </a>
                             </li>
                             <li>
-                                <a href='#my-skills'>
+                                <a
+                                    href='#my-skills'
+                                    onClick={hideBurgerMenu}
+                                >
                                     <p>{t("navbar.skills")}</p>
                                 </a>
                             </li>
                             <li>
-                                <a href='https://github.com/victorcolina22' target='_blank'>
+                                <a
+                                    href='https://github.com/victorcolina22'
+                                    target='_blank'
+                                    onClick={hideBurgerMenu}
+                                >
                                     <p>Github</p>
                                 </a>
                             </li>
                             <li>
-                                <a href='#contact-me'>
+                                <a
+                                    href='#contact-me'
+                                    onClick={hideBurgerMenu}
+                                >
                                     <p>{t("navbar.contact")}</p>
                                 </a>
                             </li>
