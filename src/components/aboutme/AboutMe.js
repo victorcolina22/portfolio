@@ -1,3 +1,5 @@
+// import { useEffect, useMemo, useRef, useState } from "react";
+
 import { useTranslation } from "react-i18next";
 
 import squares from '../../assets/icons/squares.svg';
@@ -6,34 +8,33 @@ import closeIcon from '../../assets/icons/close.svg';
 import laptop from '../../assets/laptop.png';
 
 import './aboutme.css';
-import { useEffect, useMemo, useRef, useState } from "react";
 
 export const AboutMe = () => {
 
-    const targetRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
+    // const targetRef = useRef(null);
+    // const [isVisible, setIsVisible] = useState(false);
 
-    const callbackFunction = (entries) => {
-        const [entry] = entries; //const entry = entries[0];
-        setIsVisible(entry.isIntersecting);
-    }
+    // const callbackFunction = (entries) => {
+    //     const [entry] = entries; //const entry = entries[0];
+    //     setIsVisible(entry.isIntersecting);
+    // }
 
-    const options = useMemo(() => {
-        return {
-            root: null,
-            threshold: 0.5
-        }
-    }, []);
+    // const options = useMemo(() => {
+    //     return {
+    //         root: null,
+    //         threshold: 0.5
+    //     }
+    // }, []);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(callbackFunction, options);
-        const currentTarget = targetRef.current;
-        if (currentTarget) observer.observe(currentTarget);
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(callbackFunction, options);
+    //     const currentTarget = targetRef.current;
+    //     if (currentTarget) observer.observe(currentTarget);
 
-        return () => { //cleanUp function
-            if (currentTarget) observer.unobserve(currentTarget);
-        }
-    }, [targetRef, options])
+    //     return () => { //cleanUp function
+    //         if (currentTarget) observer.unobserve(currentTarget);
+    //     }
+    // }, [targetRef, options])
 
     const [t] = useTranslation("global");
 
@@ -41,10 +42,7 @@ export const AboutMe = () => {
         <>
             <div className="aboutme" id="about-me">
                 <div className='aboutme__description'>
-                    <div
-                        className='aboutme__title animate__animated animate__fadeInLeft'
-                        ref={targetRef}
-                    >
+                    <div className='aboutme__title animate__animated animate__fadeInLeft'>
                         <h2 className='aboutme__about'>
                             {t("about-me.about")}
                         </h2>

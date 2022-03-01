@@ -49,7 +49,10 @@ export const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='https://github.com/victorcolina22' target='_blank'>
+                            <a
+                                href='https://github.com/victorcolina22'
+                                target='_blank'
+                                rel='noreferrer'>
                                 <p>Github</p>
                             </a>
                         </li>
@@ -107,6 +110,7 @@ export const Navbar = () => {
                                 <a
                                     href='https://github.com/victorcolina22'
                                     target='_blank'
+                                    rel='noreferrer'
                                     onClick={hideBurgerMenu}
                                 >
                                     <p>Github</p>

@@ -8,7 +8,7 @@ import './contact.css';
 
 export const Contact = () => {
 
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+    const { enqueueSnackbar } = useSnackbar();
 
     const [t] = useTranslation("global");
 
