@@ -1,50 +1,54 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, Move, MoveIn } from "react-scroll-motion";
+import emailjs from '@emailjs/browser';
+import { useSnackbar } from 'notistack';
 
 import rocket from '../../assets/rocket.svg';
 
 import './contact.css';
 
-const FadeUp = batch(Fade(), Move());
-
 export const Contact = () => {
 
-    const [inputValue, setInputValue] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
-    const { name, email, message } = inputValue;
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-    const handleInputChange = ({ target }) => {
-        setInputValue({
-            ...inputValue,
-            [target.name]: target.value
-        });
-    }
+    const [t] = useTranslation("global");
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setInputValue({
-            name: '',
-            email: '',
-            message: ''
-        });
+        emailjs.sendForm('service_pw0hhnn', 'template_1sesg6v', e.target, 'XTX0MXxvzdvconHDR')
+            .then((result) => {
+                if (result.status === 200) {
+                    enqueueSnackbar(t('notifications.success'), {
+                        variant: 'success'
+                    });
+                } else {
+                    enqueueSnackbar(t('notifications.error'), {
+                        variant: 'error'
+                    });
+                }
+            }, (error) => {
+                console.log(error.text);
+            });
 
-        console.log(inputValue)
+        // const result = 200;
+        // setTimeout(() => {
+        //     if (result === 200) {
+        //         enqueueSnackbar(t("notifications.success"), {
+        //             variant: 'success'
+        //         });
+
+        //         enqueueSnackbar(t("notifications.error"), {
+        //             variant: 'error'
+        //         });
+        //     }
+        // }, 2000);
+
+        e.target.reset();
     }
-
-    const [t] = useTranslation("global");
 
     return (
         <>
-            {/* <ScrollContainer>
-                <ScrollPage page={4}> */}
             <div className="contact" id="contact-me">
-                {/* <Animator animation={MoveIn(-1000, 0)}> */}
                 <div className="contact__title">
                     <h2 className="contact__contact">
                         {t("contact.contact")}
@@ -53,7 +57,6 @@ export const Contact = () => {
                         {t("contact.me")}
                     </h2>
                 </div>
-                {/* </Animator> */}
                 <form
                     id="form"
                     onSubmit={handleSubmit}>
@@ -61,32 +64,23 @@ export const Contact = () => {
                     <input
                         type="text"
                         name="name"
-                        onChange={handleInputChange}
-                        value={name} />
+                        placeholder="Your name"
+                        required />
 
                     <label htmlFor="email">{t("form.email")}</label>
                     <input
                         type="email"
                         name="email"
-                        onChange={handleInputChange}
-                        value={email} />
+                        placeholder="Email"
+                        required />
 
                     <label htmlFor="message">{t("form.message")}</label>
-                    <textarea
-                        name="message"
-                        onChange={handleInputChange}
-                        value={message} />
+                    <textarea name="message" />
 
                     <button>{t("form.send")}</button>
                 </form>
-                {/* <Animator animation={FadeUp}> */}
                 <img className="rocket-img" src={rocket} alt='rocket' />
-                {/* <div className='contact__description'>
-                </div> */}
-                {/* </Animator> */}
             </div>
-            {/* </ScrollPage>
-            </ScrollContainer> */}
         </>
     )
 }

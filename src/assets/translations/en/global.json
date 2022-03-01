@@ -29,5 +29,9 @@
     "email": "Email",
     "message": "Message",
     "send": "Send"
+  },
+  "notifications": {
+    "success": "Information sent successfully",
+    "error": "There was a problem sending your information"
   }
 }

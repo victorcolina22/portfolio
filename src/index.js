@@ -8,8 +8,12 @@ import i18next from 'i18next';
 import global_es from './assets/translations/es/global.json';
 import global_en from './assets/translations/en/global.json';
 
-import './index.css';
 import { TranslationContext } from './assets/translations/TranslationContext';
+import { SnackbarProvider } from 'notistack';
+// import Grow from '@mui/material/Grow';
+import Slide from '@mui/material/Slide';
+
+import './index.css';
 
 const language = localStorage.getItem('lng');
 
@@ -31,7 +35,12 @@ ReactDOM.render(
   <React.StrictMode>
     <I18nextProvider i18n={i18next}>
       <TranslationContext.Provider value={i18next}>
-        <App />
+        <SnackbarProvider
+          maxSnack={2}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+          TransitionComponent={Slide}>
+          <App />
+        </SnackbarProvider>
       </TranslationContext.Provider>
     </I18nextProvider>
   </React.StrictMode>,

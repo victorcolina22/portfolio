@@ -29,5 +29,9 @@
     "email": "Correo",
     "message": "Mensaje",
     "send": "Enviar"
+  },
+  "notifications": {
+    "success": "Información enviada correctamente",
+    "error": "Hubo un problema al enviar tu información"
   }
 }

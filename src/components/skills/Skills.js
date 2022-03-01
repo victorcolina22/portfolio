@@ -1,13 +1,9 @@
 import { useTranslation } from "react-i18next";
 
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, Move, MoveIn } from "react-scroll-motion";
-
 import squares from '../../assets/icons/squares.svg';
 import minimize from '../../assets/icons/minimize.svg';
 import closeIcon from '../../assets/icons/close.svg';
 import './skills.css';
-
-const FadeUp = batch(Fade(), Move());
 
 export const Skills = () => {
 
@@ -15,10 +11,7 @@ export const Skills = () => {
 
     return (
         <>
-            {/* <ScrollContainer>
-                <ScrollPage page={2}> */}
             <div className="skillSet" id="my-skills">
-                {/* <Animator animation={FadeUp}> */}
                 <div className="userWindow">
                     <div className='userWindow__header'>
                         <img className='minimize' src={minimize} alt='minimize-icon' loading="lazy" />
@@ -35,9 +28,6 @@ export const Skills = () => {
                         for deep learning and decision making with TensorflowJS for developing nice problem solving apps through AI.
                     </p>
                 </div>
-                {/* </Animator> */}
-
-                {/* <Animator animation={MoveIn(1000, 0)}> */}
                 <div className='skillSet__description'>
                     <div className='skillSet__title'>
                         <h1 className='skillSet__skill'>
@@ -52,10 +42,7 @@ export const Skills = () => {
 
                     </div>
                 </div>
-                {/* </Animator> */}
             </div>
-            {/* </ScrollPage>
-            </ScrollContainer> */}
         </>
     )
 }
