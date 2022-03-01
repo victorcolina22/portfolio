@@ -133,7 +133,7 @@ p {
   .presentation__front {
     -webkit-text-stroke: 1px var(--primary);
     font-size: 3rem;
-    margin-left: -40px;
+    /* margin-left: -40px; */
   }
 
   .presentation__end {
