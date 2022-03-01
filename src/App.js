@@ -5,21 +5,9 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Skills } from "./components/skills/Skills";
 import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
-import { useEffect, useState } from "react";
+
 
 export const App = () => {
-
-    const [offsetY, setOffsetY] = useState(0);
-    const handleScroll = () => setOffsetY(window.pageYOffset);
-    // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    }, [])
 
     const [t] = useTranslation("global");
 
@@ -38,7 +26,7 @@ export const App = () => {
 
                     <div className='presentation__button'>
                         <hr />
-                        <button>{t("presentation.projects")}</button>
+                        <a href="#myProjects">{t("presentation.projects")}</a>
                     </div>
                 </div>
             </header>

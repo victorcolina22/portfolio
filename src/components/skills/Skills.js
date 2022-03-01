@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import squares from '../../assets/icons/squares.svg';
 import minimize from '../../assets/icons/minimize.svg';
 import closeIcon from '../../assets/icons/close.svg';
+import { VscDebugStart } from 'react-icons/vsc';
+
 import './skills.css';
 
 export const Skills = () => {
@@ -24,22 +26,42 @@ export const Skills = () => {
                         <div className='body'></div>
                     </div>
                     <p className="userWindow__text">
-                        Currently one of the fields I am most excited about yet one of the least explored by me, currently getting used to effective design patterns and data algorithms,
-                        for deep learning and decision making with TensorflowJS for developing nice problem solving apps through AI.
+                        {t('skills.window.description')}
                     </p>
                 </div>
                 <div className='skillSet__description'>
                     <div className='skillSet__title'>
-                        <h1 className='skillSet__skill'>
+                        <h2 className='skillSet__skill'>
                             {t("skills.skill")}
-                        </h1>
-                        <h1 className='skillSet__set'>
+                        </h2>
+                        <h2 className='skillSet__set'>
                             {t("skills.set")}
-                        </h1>
+                        </h2>
                     </div>
 
                     <div className="skillSet__habilities">
+                        <div>
+                            <VscDebugStart id="firstArrow" />
+                            <p>React</p>
+                        </div>
+                        <div>
+                            <VscDebugStart id="secondArrow" />
+                            <p>TypeScript</p>
+                        </div>
+                        <div>
+                            <VscDebugStart id="thirdArrow" />
+                            <p>JavaScript (ES6+)</p>
+                        </div>
 
+                        <div>
+                            <VscDebugStart id="fourthArrow" />
+                            <p>HTML5</p>
+                        </div>
+
+                        <div>
+                            <VscDebugStart id="fifthArrow" />
+                            <p>CSS3</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,9 +10,12 @@
   "about-me": {
     "about": "About",
     "me": "ME",
-    "description": "Greetings, I am a Front-End Developer, someone proactive who is always looking for new challenges and someone very enthusiastic about constantly learning. I love the JavaScript language and it's what I've used since I started in this programming world, but I'm open to learning any stack whenever the opportunity exists."
+    "description": "Hello! My name is Victor, I'm a Front-End Developer and I love creating things. Since I was little I've always had a taste for technology but it wasn't until 2020 that I got the chance to start my path in programming, since then I don't plan to stop!"
   },
   "skills": {
+    "window": {
+      "description": "I love the JavaScript language and it's what I've been using since I started in this programming world, but I'm open to learn any stack whenever there is the opportunity."
+    },
     "skill": "Skill",
     "set": "Set"
   },

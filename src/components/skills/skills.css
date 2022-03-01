@@ -1,3 +1,7 @@
+:root {
+  --primary: #fff;
+}
+
 .skillSet {
   width: 90%;
   margin: 0 auto;
@@ -11,13 +15,13 @@
   background-color: #10110e;
   width: 400px;
   height: 550px;
-  border: 2px solid #fff;
+  border: 2px solid var(--primary);
 }
 
 .userWindow__header {
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--primary);
   display: flex;
   align-items: center;
   justify-content: end;
@@ -35,14 +39,14 @@
 .userWindow__avatar {
   width: 200px;
   height: 200px;
-  border: 1px solid #fff;
+  border: 1px solid var(--primary);
   margin: 30px auto;
 }
 
 .head {
   width: 55px;
   height: 55px;
-  border: 1px solid #fff;
+  border: 1px solid var(--primary);
   border-radius: 100%;
   margin: 30px auto 0;
 }
@@ -50,7 +54,7 @@
 .body {
   width: 100px;
   height: 70px;
-  border: 1px solid #fff;
+  border: 1px solid var(--primary);
   margin: 0 auto;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
@@ -58,9 +62,10 @@
 
 .userWindow__text {
   width: 300px;
-  color: #fff;
+  color: var(--primary);
+  font-size: 1.1rem;
   text-align: center;
-  margin: 50px auto 0;
+  margin: 75px auto 0;
 }
 
 .skillSet__title {
@@ -72,15 +77,42 @@
 
 .skillSet__skill {
   color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px var(--primary);
   font-size: 7rem;
 }
 
 .skillSet__set {
-  color: #fff;
-  -webkit-text-stroke: 6px #fff;
+  color: var(--primary);
+  -webkit-text-stroke: 6px var(--primary);
   font-size: 7rem;
   align-self: flex-end;
+}
+
+.skillSet__habilities div {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  gap: 10px;
+  font-size: 1.5rem;
+  margin: 30px 0;
+}
+
+#firstArrow,
+#secondArrow,
+#thirdArrow,
+#fourthArrow,
+#fifthArrow {
+  transition: 280ms ease-in-out;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#firstArrow:hover,
+#secondArrow:hover,
+#thirdArrow:hover,
+#fourthArrow:hover,
+#fifthArrow:hover {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 767px) {
@@ -96,7 +128,7 @@
 
   .skillSet__set {
     font-size: 4rem;
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px var(--primary);
   }
 
   .skillSet__skill {

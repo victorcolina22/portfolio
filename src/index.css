@@ -88,7 +88,7 @@ p {
   margin: 0;
 } */
 
-.presentation__button button {
+.presentation__button a {
   display: block;
   background: transparent;
   width: 180px;
@@ -101,9 +101,11 @@ p {
   cursor: pointer;
   margin: 30px auto;
   transition: 250ms ease-in-out;
+  text-decoration: none;
+  text-align: center;
 }
 
-.presentation__button button:hover {
+.presentation__button a:hover {
   background-color: var(--primary);
   color: #000;
   transition: 250ms ease-in-out;
