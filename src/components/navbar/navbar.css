@@ -34,12 +34,23 @@ li {
 li a {
   color: var(--primary);
   text-decoration: none;
-  transition: 200ms ease-in-out;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  /* transition: 200ms ease-in-out; */
+}
+
+li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  clip-path: var(--clippy);
+  transition: 0.3s ease-in-out;
 }
 
 li a:hover {
-  transition: 200ms ease-in-out;
-  color: var(--secondary);
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  /* color: var(--secondary); */
 }
 
 .changeLanguage {
