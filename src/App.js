@@ -1,24 +1,49 @@
 import { useTranslation } from "react-i18next";
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 
 import { AboutMe } from "./components/aboutme/AboutMe";
 import { Navbar } from "./components/navbar/Navbar";
 import { Skills } from "./components/skills/Skills";
 import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 
 export const App = () => {
 
+    const aboutMeRef = useRef(null);
+    const skillsRef = useRef(null);
+    const projectsRef = useRef(null);
+    const contactRef = useRef(null);
+
+    const callback = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fadeUp');
+            }
+        })
+    }
+    const observer = new IntersectionObserver(callback, {
+        root: null,
+        rootMargin: '100px 0px 0px 0px',
+        threshold: 0.3
+    });
+
     const [t] = useTranslation("global");
 
     useEffect(() => {
-        Aos.init({
-            duration: 500,
-            once: true
-        });
+        const currentTarget = {
+            aboutme: aboutMeRef.current,
+            skills: skillsRef.current,
+            projects: projectsRef.current,
+            contact: contactRef.current,
+        }
+
+        const { aboutme, skills, projects, contact } = currentTarget;
+
+        observer.observe(aboutme);
+        observer.observe(skills);
+        observer.observe(projects);
+        observer.observe(contact);
     }, [])
 
     return (
@@ -41,19 +66,19 @@ export const App = () => {
                 </div>
             </header>
 
-            <section data-aos='fade-up' className="aboutme-container">
+            <section className="aboutme-container" ref={aboutMeRef}>
                 <AboutMe />
             </section>
 
-            <section data-aos='fade-up' className="skillset-container">
+            <section className="skillset-container" ref={skillsRef}>
                 <Skills />
             </section>
 
-            <section data-aos='fade-up' className="projects-container">
+            <section className="projects-container" ref={projectsRef}>
                 <Projects />
             </section>
 
-            <section data-aos='fade-up' className="contact-container">
+            <section className="contact-container" ref={contactRef}>
                 <Contact />
             </section>
         </div>

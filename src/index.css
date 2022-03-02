@@ -113,11 +113,34 @@ p {
 .aboutme-container {
   background-color: #17181c;
   height: 100vh;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 350ms ease-in-out all;
+}
+
+.skillset-container {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 350ms ease-in-out all;
 }
 
 .projects-container {
   background-color: #17181c;
   height: 100vh;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 350ms ease-in-out all;
+}
+
+.contact-container {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 350ms ease-in-out all;
+}
+
+.fadeUp {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 767px) {
@@ -139,6 +162,18 @@ p {
   .presentation__end {
     font-size: 3rem;
     margin: 0;
+  }
+
+  .aboutme-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
