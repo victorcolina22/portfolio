@@ -80,6 +80,33 @@ li a:hover {
   transition: 0.4s;
 }
 
+.navbar__hamburger__x span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  position: relative;
+  background-color: var(--primary);
+  border-radius: 6px;
+  z-index: 1;
+  transition: 0.4s;
+}
+
+.navbar__hamburger__x span:nth-child(1) {
+  transform: rotate(45deg);
+  margin-bottom: -0.145rem;
+}
+
+.navbar__hamburger__x span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__hamburger__x span:nth-child(3) {
+  margin-top: -0.635rem;
+  transform: rotate(-45deg);
+}
+
 #menu {
   display: none;
 }
@@ -114,20 +141,15 @@ hr {
   margin: 0 auto;
 }
 
-/* @media (min-width: 767px) {
+@media (max-width: 768px) {
   .navbar {
-    padding: 0 30px;
+    width: 90%;
+    margin: 50px auto 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 27px;
   }
-
-  .navbar__hamburger,
-  .navbar-responsive {
-    display: none;
-  }
-
-  .navbar__items {
-    display: block;
-  }
-} */
+}
 
 @media (min-width: 1024px) {
   .navbar {

@@ -82,7 +82,18 @@ export const Navbar = () => {
 
                 <div className='navbar-responsive'>
                     <label htmlFor='menu'>
-                        <div className='navbar__hamburger navbar__label'>
+                        <div
+                            className={!burgerMenu ? 'navbar__hamburger' : ''}
+                            // style={{ display: !burgerMenu ? 'block' : 'none' }}
+                            onChange={handleBurgerMenu}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div
+                            className={burgerMenu ? 'navbar__hamburger__x' : ''}
+                            // style={{ display: burgerMenu ? 'block' : 'none' }}
+                            onChange={handleBurgerMenu}>
                             <span></span>
                             <span></span>
                             <span></span>
