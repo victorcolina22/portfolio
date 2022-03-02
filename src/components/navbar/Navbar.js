@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import './navbar.css';
 
-import cv from '../../assets/Curriculum_Victor_Colina.pdf';
+import cv from '../../assets/Curriculum_Victor.pdf';
 
 
 export const Navbar = () => {
