@@ -104,7 +104,6 @@
 #fifthArrow {
   transition: 280ms ease-in-out;
   font-size: 1.3rem;
-  cursor: pointer;
 }
 
 #firstArrow:hover,
