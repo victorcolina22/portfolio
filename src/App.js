@@ -5,46 +5,18 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Skills } from "./components/skills/Skills";
 import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
-import { useEffect, useRef } from "react";
-
+import { useRef } from "react";
+import { useNearScreen } from "./hooks/useNearScreen";
 
 export const App = () => {
+    const [t] = useTranslation("global");
 
     const aboutMeRef = useRef(null);
     const skillsRef = useRef(null);
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
 
-    const callback = (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fadeUp');
-            }
-        })
-    }
-    const observer = new IntersectionObserver(callback, {
-        root: null,
-        rootMargin: '100px 0px 0px 0px',
-        threshold: 0.3
-    });
-
-    const [t] = useTranslation("global");
-
-    useEffect(() => {
-        const currentTarget = {
-            aboutme: aboutMeRef.current,
-            skills: skillsRef.current,
-            projects: projectsRef.current,
-            contact: contactRef.current,
-        }
-
-        const { aboutme, skills, projects, contact } = currentTarget;
-
-        observer.observe(aboutme);
-        observer.observe(skills);
-        observer.observe(projects);
-        observer.observe(contact);
-    }, [])
+    const [show] = useNearScreen([aboutMeRef, skillsRef, projectsRef, contactRef]);
 
     return (
         <div className="animate__animated animate__fadeIn animate__slower">
@@ -67,19 +39,19 @@ export const App = () => {
             </header>
 
             <section className="aboutme-container" ref={aboutMeRef}>
-                <AboutMe />
+                {show && <AboutMe />}
             </section>
 
             <section className="skillset-container" ref={skillsRef}>
-                <Skills />
+                {show && <Skills />}
             </section>
 
             <section className="projects-container" ref={projectsRef}>
-                <Projects />
+                {show && <Projects />}
             </section>
 
             <section className="contact-container" ref={contactRef}>
-                <Contact />
+                {show && <Contact />}
             </section>
         </div>
     )
