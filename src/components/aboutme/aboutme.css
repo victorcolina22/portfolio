@@ -42,34 +42,22 @@
 }
 
 .window {
-  width: 600px;
   height: 600px;
-  border: 2px solid #fff;
-  position: relative;
+  width: 600px;
 }
 
-.window__header {
-  width: 100%;
-  height: 50px;
-  border-bottom: 2px solid #fff;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 5px 0 0;
-}
-
-.minimize,
-.squares {
+.aboutme__minimizeIcon,
+.aboutme__expandIcon {
   width: 40px;
 }
 
-.close {
+.aboutme__closeIcon {
   width: 30px;
 }
 
-.minimize,
-.squares,
-.close {
+.aboutme__minimizeIcon,
+.aboutme__expandIcon,
+.aboutme__closeIcon {
   margin: 0 10px 0 0;
 }
 
