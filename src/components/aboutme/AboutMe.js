@@ -25,8 +25,8 @@ export const AboutMe = () => {
         </p>
       </div>
 
-      <Window className="window" height="600px" width="600px">
-        <WindowHeader className="window__header" height="50px">
+      <Window className="window">
+        <WindowHeader height="50px">
           <MinimizeIcon className="aboutme__minimizeIcon" />
           <ExpandIcon className="aboutme__expandIcon" />
           <CloseIcon className="aboutme__closeIcon" />

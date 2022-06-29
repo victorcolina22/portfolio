@@ -41,6 +41,11 @@
   font-size: 1.3rem;
 }
 
+.window {
+  height: 600px;
+  width: 600px;
+}
+
 .aboutme__minimizeIcon,
 .aboutme__expandIcon {
   width: 40px;

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export function Window({ children, className, height = '100px', width = '100px', style }) {
+export function Window({ children, className, height, width, style }) {
   return (
     <div className={className} style={{
       width,
