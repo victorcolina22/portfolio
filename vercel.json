@@ -1,4 +1,0 @@
-{
-  "version": 2,
-  "builds": [{ "src": "src", "use": "node@20" }]
-}
